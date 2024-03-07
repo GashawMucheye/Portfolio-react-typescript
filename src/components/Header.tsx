@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 const Header: FC = () => {
   return (
     <header className="header">
-      <Navbar />
+      <Navbar logo="PORTFOLIO" />
     </header>
   );
 };

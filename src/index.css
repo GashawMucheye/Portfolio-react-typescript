@@ -6,3 +6,8 @@
   border: none;
   text-decoration: none;
 }
+.icon_page {
+  font-size: 12px;
+  margin-block-start: 12px;
+  text-align: center;
+}

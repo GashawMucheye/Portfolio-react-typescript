@@ -1,24 +1,30 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+
+import { Link } from 'react-router-dom';
 import './Navbar.css';
-const Navbar: FC = () => {
+import { LogoType } from '../types/logoType';
+const Navbar = ({ logo }: LogoType) => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 
   return (
     <nav id="menu" className="menubar">
-      <h1>LOGO</h1>
+      <h1>{logo}</h1>
       <ul id="lists" className={isOpenMenu ? '#lists active' : '#lists'}>
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">About</a>
+          <Link to="/About">About</Link>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link to="/Contact">Contact</Link>
         </li>
         <li>
-          <a href="#">Portfolio</a>
+          <Link to="/Projects">Projects</Link>
+        </li>
+        <li>
+          <Link to="/Services">Services</Link>
         </li>
       </ul>
       <div className="icons" onClick={() => setIsOpenMenu(!isOpenMenu)}>
