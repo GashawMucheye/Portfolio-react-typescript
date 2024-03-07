@@ -1,5 +1,7 @@
 .header {
   background-color: green;
   min-height: 60px;
-  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
