@@ -1,6 +1,13 @@
 .contact_page {
-  background-color: red;
   display: grid;
   place-items: center;
+
   min-height: 100vh;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  /* margin-top: 2em; */
+  background-color: steelblue;
+
+  padding: 0.5rem;
 }

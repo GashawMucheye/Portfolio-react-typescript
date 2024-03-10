@@ -8,7 +8,7 @@
 :root {
   --main_color: darkslategray;
   --main_text: black;
-  --secondary_color: brown;
+  --secondary_color: rgba(0, 0, 0, 0.5);
   --border: 2px solid green;
 }
 
@@ -36,8 +36,8 @@
 #lists a {
   text-decoration: none;
   color: white;
-
-  text-transform: uppercase;
+  /* 
+  text-transform: uppercase; */
 }
 
 .icons {
@@ -47,6 +47,11 @@
 @media screen and (max-width: 769px) {
   .icons {
     display: block;
+    /* font-size: 20px; */
+  }
+  .icons:hover {
+    cursor: pointer;
+    color: white;
   }
   #lists {
     display: flex;

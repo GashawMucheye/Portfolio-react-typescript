@@ -1,6 +1,63 @@
+/* about_page */
+:root {
+  --main_color: darkslategrey;
+  --secondary_color: rgba(64, 64, 244, 0.5);
+}
 .about_page {
-  background-color: red;
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+  /* display: grid; */
+  /* place-items: center; */
+
+  min-height: 300px;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  margin-top: 12em;
+  /* background-color: steelblue; */
+  padding: 1rem;
+}
+/* section */
+.about_page section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+/* img */
+.about_page img {
+  border: 2px solid darkslategrey;
+  border-width: 6px;
+  padding: 0.5em;
+  width: 100%;
+  border-radius: 0px 50% 0px 50px;
+}
+
+.about_page h3 span {
+  color: darkblue;
+}
+/* button */
+.about_page .btn {
+  padding: 1em;
+  margin: 12px;
+  border-radius: 12px;
+  border: 2px solid darkblue;
+  background-color: #ccc;
+}
+
+#id_resume {
+  background-color: var(--secondary_color);
+  margin-left: auto;
+}
+.about_page .btn:hover {
+  cursor: pointer;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 769px) {
+  section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
 }
