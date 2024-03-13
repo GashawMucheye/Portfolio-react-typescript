@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import { LogoType } from '../types/logoType';
+import { LogoType } from '../types/Types';
 const Navbar = ({ logo }: LogoType) => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 

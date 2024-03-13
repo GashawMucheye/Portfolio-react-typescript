@@ -7,8 +7,22 @@
   text-decoration: none;
 }
 
-.icon_page {
+/* .icon_page {
   font-size: 12px;
   margin-block-start: 12px;
   text-align: center;
+} */
+body {
+  height: 100dvh;
+}
+
+#face_icon,
+#linkdin_icon {
+  color: rgb(96, 96, 203);
+  font-size: 25px;
+}
+
+.whatsup_icon {
+  color: green;
+  font-size: 25px;
 }
