@@ -6,6 +6,10 @@ import './Home.css';
 // import Contact from './Contact';
 import { TypeAnimation } from 'react-type-animation';
 import { FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import About from './About';
+import Contact from './Contact';
+import Projects from './Projects';
+import Services from './Services';
 const Home: FC = () => {
   const navgate = useNavigate();
 
@@ -13,7 +17,7 @@ const Home: FC = () => {
     navgate('./About');
   };
   return (
-    <div className="home_page">
+    <div className="home_page" id="homing">
       <section className="home_class">
         <div className="home">
           <h2>
@@ -41,8 +45,8 @@ const Home: FC = () => {
             />
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, rerum fuga Lorem ipsum,
-            dolor sit amet consectetur adipisicing
+            Lorem ipsum dolor sit amet consectetur, rerum fuga <br />
+            Lorem ipsum, dolor sit amet consectetur adipisicing
           </p>
           <div id="home_icons">
             <FaLinkedin id="linkdin_icon" />
@@ -60,15 +64,25 @@ const Home: FC = () => {
           alt="my_img"
         />
       </section>
-      {/* <section className="2">
-        <About />
-      </section> */}
-      {/* <section className="3">
-        <Contact />
-      </section>
-      <section className="4">projects</section>
-      <section className="5">services</section>
-      <section className="5">skills</section> */}
+      <hr />
+      {/* <section className="2"> */}
+      <About />
+      {/* </section> */}
+      {/* <section className="3"> */}
+      <Contact />
+      {/* </section> */}
+      {/* <section className="4"> */}
+      <Projects />
+      {/* </section> */}
+      {/* <section className="5"> */}
+      <Services />
+      {/* </section> */}
+      <a
+        href="#homing"
+        style={{ textAlign: 'center', fontSize: '50px', marginLeft: 'auto' }}
+      >
+        up
+      </a>
     </div>
   );
 };

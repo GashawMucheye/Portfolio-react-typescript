@@ -5,8 +5,14 @@
   list-style: none;
   border: none;
   text-decoration: none;
+  /* overflow-x: hidden; */
 }
 
+:root {
+  --main_color: darkslategrey;
+  --secondary_color: rgba(64, 64, 244, 0.5);
+  --third_color: darkblue;
+}
 /* .icon_page {
   font-size: 12px;
   margin-block-start: 12px;

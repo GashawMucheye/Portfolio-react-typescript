@@ -11,7 +11,7 @@ const About: FC = () => {
             alt="pic1"
           />
         </div>
-        <div>
+        <div id="div_about">
           <h3>
             About
             <span>Me</span>

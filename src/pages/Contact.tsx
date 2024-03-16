@@ -6,14 +6,14 @@ import { FaFacebook, FaLinkedin, FaPhone, FaWhatsapp } from 'react-icons/fa';
 const Contact: FC = () => {
   return (
     <main className="main_contact">
-      <h2 style={{ marginTop: '2em', textAlign: 'center' }}>
+      <h2 id="contact_heading">
         Contact <span>Me</span>
       </h2>
       <div className="contact_screen">
         <section className="contact_info">
-          <div style={{ marginTop: '6em' }}>
+          <div style={{ marginBlock: '6em' }}>
             <h2>
-              Fell Free <span>To Contact</span>
+              Fell Free {} <span>To Contact</span>
             </h2>
             <div>
               <h4>
@@ -63,7 +63,7 @@ const Contact: FC = () => {
               placeholder="Type Your Short Message"
               name="textarea"
               id="textarea"
-              cols={30}
+              cols={25}
               rows={10}
             ></textarea>
           </div>
