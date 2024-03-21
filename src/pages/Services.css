@@ -4,11 +4,11 @@
   min-height: 100vh;
   max-width: 1250px;
 
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-inline: auto;
   margin-top: 3px;
   /* background-color: steelblue; */
-  background-color: var(--secondary_color);
-
+  /* background-color: var(--secondary_color); */
   padding: 0.5rem;
 }
 
@@ -27,6 +27,7 @@
 
 #service_heading {
   margin-top: 4em;
+  text-align: center;
 }
 
 .service > button {
@@ -40,12 +41,12 @@
 /* .service:nth-child(2) > button {
   margin-top: 2.2em;
 } */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   #service_heading {
     margin-top: 2em;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .main_service {
     margin-bottom: 6em;
   }
@@ -59,5 +60,13 @@
     overflow-x: hidden;
 
     width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .main_service {
+    margin-bottom: 2em;
+  }
+  #service_heading {
+    margin-top: 0px;
   }
 }

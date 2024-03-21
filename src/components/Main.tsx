@@ -6,6 +6,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Projects from '../pages/Projects';
 import Services from '../pages/Services';
+import Skills from '../pages/Skills';
 // import MainSection from './MainSection';
 const Main: FC = () => {
   return (
@@ -17,6 +18,7 @@ const Main: FC = () => {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Projects" element={<Projects />} />
+        <Route path="/Skills" element={<Skills />} />
         <Route path="/Services" element={<Services />} />
       </Routes>
     </main>

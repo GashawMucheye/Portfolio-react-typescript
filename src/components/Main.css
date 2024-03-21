@@ -3,6 +3,7 @@
   padding: 1rem;
   width: 100%;
   flex: 1;
-  background-color: yellow;
-  /* overflow-x: auto; */
+  /* background-color: yellow; */
+  overflow: hidden;
+  margin-inline: auto;
 }

@@ -21,6 +21,9 @@ const Navbar = ({ logo }: LogoType) => {
           <Link to="/Contact">Contact</Link>
         </li>
         <li>
+          <Link to="/Skills">Skills</Link>
+        </li>
+        <li>
           <Link to="/Projects">Projects</Link>
         </li>
         <li>

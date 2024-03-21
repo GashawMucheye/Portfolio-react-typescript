@@ -1,9 +1,7 @@
 .footer {
   background-color: green;
-  /* background-color: darkslategray; */
+  background-color: var(--main_color);
 
-  /* position: sticky;
-  bottom: 0; */
   position: fixed;
   bottom: 0px;
   width: 100%;
