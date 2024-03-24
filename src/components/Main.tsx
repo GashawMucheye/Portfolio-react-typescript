@@ -7,11 +7,9 @@ import Contact from '../pages/Contact';
 import Projects from '../pages/Projects';
 import Services from '../pages/Services';
 import Skills from '../pages/Skills';
-// import MainSection from './MainSection';
 const Main: FC = () => {
   return (
     <main className="main">
-      {/* <MainSection /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />

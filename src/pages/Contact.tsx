@@ -1,9 +1,45 @@
-import { FC } from 'react';
+import { FC, useRef, useState } from 'react';
 import './Contact.css';
 import { MdEmail } from 'react-icons/md';
+
 import { FaFacebook, FaLinkedin, FaPhone, FaWhatsapp } from 'react-icons/fa';
-// s
+import emailjs from '@emailjs/browser';
+//
 const Contact: FC = () => {
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [phone, setPhone] = useState<string>('');
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        // 'service_yo6g5ym',
+        import.meta.env.VITE_SERVICE_EMAILJS,
+        // 'template_6qq73re',
+        import.meta.env.VITE_TEMPLATE_EMAILJS,
+        // form.current,
+        // 'z2cH9INylXX9w6xyk'
+        import.meta.env.VITE_APIKEY_EMAILJS
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          // toast.success('Message sent succcefully');
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setEmail('');
+    setName('');
+    setMessage('');
+    // setPhone('');
+  };
+
   return (
     <main className="main_contact">
       <h2 id="contact_heading">
@@ -33,38 +69,51 @@ const Contact: FC = () => {
             </div>
           </div>
         </section>
-        <form>
+        <form ref={form} onSubmit={sendEmail}>
           <div className="input_class">
             <input
               type="text"
-              name="text"
+              name="user_name"
               id="text"
               placeholder="Enter Your Name"
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              value={name}
             />
           </div>
           <div className="input_class">
             <input
               type="email"
-              name="email"
+              name="user_email"
               id="email"
               placeholder="Enter Your Email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              value={email}
             />
           </div>
           <div className="input_class">
             <input
               type="text"
               name="text"
-              id="phone"
+              id="user_phone"
               placeholder="Enter Your Celephone"
+              onChange={(e) => setPhone(e.target.value)}
+              value={phone}
             />
           </div>
           <div>
             <textarea
               placeholder="Type Your Short Message"
-              name="textarea"
+              // type="text"
+              name="message"
               id="textarea"
               cols={25}
               rows={10}
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
             ></textarea>
           </div>
           <div>

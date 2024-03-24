@@ -1,14 +1,18 @@
-// import { FaHtml5, FaCss3, FaReact, FaNodeJs } from 'react-icons/fa';
-// import './skills.css';
-// import { RiJavascriptFill } from 'react-icons/ri';
-// import { BiLogoTypescript } from 'react-icons/bi';
-// import { SiExpress, SiMysql, SiSocketdotio } from 'react-icons/si';
-// import { DiMongodb } from 'react-icons/di';
-
-import React from 'react';
-
+import { allSkills } from '../Data/dataProjects.js';
+import ProgressScreen from '../components/ProgressScreen.js';
+import './skills.css';
 const Skills = () => {
-  return <div>Skills</div>;
+  return (
+    <div className="skills">
+      <h1 style={{ textAlign: 'center' }}>
+        MY <span>SKILLS</span>
+      </h1>
+
+      {allSkills.map((skill, index) => (
+        <ProgressScreen skill={skill} key={index} />
+      ))}
+    </div>
+  );
 };
 
 export default Skills;

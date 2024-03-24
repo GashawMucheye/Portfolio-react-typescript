@@ -10,4 +10,11 @@ type Projects = {
   lin_render?: string;
   des: string;
 };
-export type { LogoType, Projects };
+
+type Skills = {
+  name: string;
+  value: number;
+  color: string;
+  img: string;
+};
+export type { LogoType, Projects, Skills };

@@ -1,0 +1,8 @@
+.progress_screen {
+  background: gray;
+
+  max-width: 400px;
+
+  border-radius: 1em;
+  /* margin-bottom: 2em; */
+}

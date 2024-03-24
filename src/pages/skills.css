@@ -1,61 +1,9 @@
-.skills > section {
-  background: #2f2626;
-  width: 600px;
-  margin-inline: auto;
-  padding: 0.5em;
-  margin: 12px;
-}
+.skills {
+  min-height: 100vh;
 
-.skills h1 {
-  background-image: url('https://media.geeksforgeeks.org/wp-content/uploads/20231218222854/1.png');
-  background-repeat: repeat;
+  margin: auto;
 
-  --webkit-background-clip: text;
-  --webkit-text-fill-color: transparent;
-  margin-top: 200px;
-  font-size: 120px;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: 'Steelfish Rg', 'helvetica neue', helvetica, arial, sans-serif;
-  font-weight: 800;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* style={{
-  background: 'steelblue',
-  width: '70%',
-  borderRadius: '1em 0 0 1em',
-}} */
-
-.pink {
-  background-color: steelblue;
-  width: 0%;
-  border-radius: 1em 0 0 1em;
-
-  animation: change 4s forwards;
-}
-
-.percentage {
-  opacity: 0;
-  animation: dis_opacity 5s forwards;
-}
-
-@keyframes change {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 60%;
-  }
-}
-@keyframes dis_opacity {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  padding: 6em;
+  max-width: 1250px;
+  /* background-color: var(--secondary_color); */
 }
