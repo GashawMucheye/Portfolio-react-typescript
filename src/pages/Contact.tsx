@@ -1,9 +1,11 @@
 import { FC, useRef, useState } from 'react';
 import './Contact.css';
 import { MdEmail } from 'react-icons/md';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
 
 import { FaFacebook, FaLinkedin, FaPhone, FaWhatsapp } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
+
 //
 const Contact: FC = () => {
   const [name, setName] = useState<string>('');
@@ -12,7 +14,7 @@ const Contact: FC = () => {
   const [phone, setPhone] = useState<string>('');
   const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e: React.ChangeEvent<HTMLFormElement>) => {
+  const sendEmail = (e: React.ChangeEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     emailjs
@@ -21,14 +23,17 @@ const Contact: FC = () => {
         import.meta.env.VITE_SERVICE_EMAILJS,
         // 'template_6qq73re',
         import.meta.env.VITE_TEMPLATE_EMAILJS,
-        // form.current,
         // 'z2cH9INylXX9w6xyk'
+
+        form.current ? form.current : '',
+
+        // // 'z2cH9INylXX9w6xyk'
         import.meta.env.VITE_APIKEY_EMAILJS
       )
       .then(
         (result) => {
           console.log(result.text);
-          // toast.success('Message sent succcefully');
+          toast.success('message sent succefully');
         },
         (error) => {
           console.log(error.text);
@@ -37,13 +42,13 @@ const Contact: FC = () => {
     setEmail('');
     setName('');
     setMessage('');
-    // setPhone('');
+    setPhone('');
   };
 
   return (
     <main className="main_contact">
       <h2 id="contact_heading">
-        Contact <span>Me</span>
+        CONTACT <span>ME</span>
       </h2>
       <div className="contact_screen">
         <section className="contact_info">
@@ -74,7 +79,7 @@ const Contact: FC = () => {
             <input
               type="text"
               name="user_name"
-              id="text"
+              id="user_name"
               placeholder="Enter Your Name"
               onChange={(e) => {
                 setName(e.target.value);
@@ -97,7 +102,7 @@ const Contact: FC = () => {
           <div className="input_class">
             <input
               type="text"
-              name="text"
+              name="user_phone"
               id="user_phone"
               placeholder="Enter Your Celephone"
               onChange={(e) => setPhone(e.target.value)}
@@ -107,9 +112,8 @@ const Contact: FC = () => {
           <div>
             <textarea
               placeholder="Type Your Short Message"
-              // type="text"
               name="message"
-              id="textarea"
+              id="message"
               cols={25}
               rows={10}
               onChange={(e) => setMessage(e.target.value)}
@@ -117,7 +121,10 @@ const Contact: FC = () => {
             ></textarea>
           </div>
           <div>
-            <button id="submit_btn">Send Message</button>
+            <button id="submit_btn" type="submit">
+              Send Message
+            </button>
+            <ToastContainer />
           </div>
         </form>
       </div>

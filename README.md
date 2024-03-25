@@ -21,3 +21,28 @@ npm i react-icons
    npm i react-type-animation
    ```
 5. creating types for typescript
+
+6. created skills components
+
+7. install framer-motion for animation
+
+```js
+npm i framer-motion
+
+```
+
+8. install @emailjs/browser
+
+```js
+npm i @emailjs/browser
+
+```
+
+9. install react-toastify
+
+```js
+npm i react toastify
+
+```
+
+10. using usecontext api
